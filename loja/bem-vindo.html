@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cadastro/style.css">
+    <link rel="stylesheet" href="loading-anim/style.css">
+    <link rel="stylesheet" href="cookies/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        function showLoader(href) {
+            document.querySelector('main').style.display = 'none';
+            document.querySelector('footer').style.display = 'none';
+            document.getElementById('loader').style.display = 'flex';
+            setTimeout(() => {
+                window.location.href = href;
+            }, 2000); // Simulate loading for 2 seconds
+        }
+    </script>
+    <title>bem vindo</title>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <main class="flex-1 flex flex-col justify-center items-center py-12" style="background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fneon.com.br%2Faprenda%2Fmei%2Fquantas-pecas-de-roupa-preciso-para-abrir-uma-loja%2F&psig=AOvVaw1Yu6w6MaGXKrRsl1j68Rby&ust=1764604428471000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKissvSdmpEDFQAAAAAdAAAAABAE'); background-size: cover; background-position: center;">
+        <div class="text-center max-w-2xl mx-auto px-4">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Bem-vindo à Minha Loja</h1>
+            <p class="text-lg text-gray-600 mb-8">
+                Produto selecionado com qualidade, preço justo e atendimento personalizado.
+                Faça login ou cadastre-se para acessar nossa loja online.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="showLoader('login/login.html')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Fazer Login
+                </button>
+                <button onclick="showLoader('cadastro/signup.html')" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Cadastrar-se
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <h2 class="text-3xl font-bold text-white">Minha Loja</h2>
+                    <p class="text-lg">
+                        Produto selecionado com qualidade, preço justo e atendimento personalizado.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-semibold text-white">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-lg block">Sobre Nós</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-lg block">Contato</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-lg block">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-semibold text-white">Serviços</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-lg block">Entrega</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-lg block">Devoluções</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-lg block">Suporte</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Links -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-semibold text-white">Siga-nos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-2xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 text-2xl"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center">
+                <p class="text-lg">&copy; 2023 Minha Loja. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="loader" class="ui-loader loader-blk" style="display: none; z-index: 9999;">
+        <svg viewBox="22 22 44 44" class="multiColor-loader">
+            <circle cx="44" cy="44" r="20.2" fill="none" stroke-width="3.6" class="loader-circle loader-circle-animation"></circle>
+        </svg>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loading-anim/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Loading bar -->
+    <div class="ui-loader loader-blk" id="loading-bar" style="display: block;">
+        <svg viewBox="22 22 44 44" class="multiColor-loader">
+            <circle cx="44" cy="44" r="20.2" fill="none" stroke-width="3.6" class="loader-circle loader-circle-animation"></circle>
+        </svg>
+    </div>
+
+    <!-- From Uiverse.io by Yaya12085 -->
+    <div class="card" id="success-card" style="display: none;">
+    <button class="dismiss" type="button" onclick="window.location.href='../bem-vindo.html'">×</button>
+    <div class="header">
+        <div class="image">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 7L9.00004 18L3.99994 13" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </div>
+        <div class="content">
+            <span class="title">Signup successful</span>
+            <p class="message">Your account has been created successfully. Welcome to our platform!</p>
+            </div>
+            <div class="actions">
+                <button class="history" type="button" onclick="window.location.href='../login/login.html'">Go to Login</button>
+                <button class="track" type="button" onclick="window.location.href='../bem-vindo.html'">Go to Home</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            document.getElementById('loading-bar').style.display = 'none';
+            document.getElementById('success-card').style.display = 'block';
+        }, 2000); // Show loading for 2 seconds
+    </script>
+</body>
+</html>
